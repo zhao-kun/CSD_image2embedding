@@ -371,7 +371,7 @@ def make_multi_view_dash(
     print(f"Serving on {url}")
     print(f"To serve this over the Internet, run `ngrok http {port}`")
     webbrowser.open(url)
-    app.run_server(port=port)
+    app.run_server(host="0.0.0.0",port=port)
     return app
 
 
@@ -394,5 +394,5 @@ def make_dash_kmeans(datasets, title, k=50, hdbscan=False, output_dir="output"):
     print(f"Serving on {url}")
     print(f"To serve this over the Internet, run `ngrok http {port}`")
     webbrowser.open(url)
-    app.run_server(port=port)
+    app.run_server(host="0.0.0.0",port=port)
     return app
